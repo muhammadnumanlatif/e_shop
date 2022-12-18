@@ -45,7 +45,10 @@ class _PermissionDashboardScreenState extends State<PermissionDashboardScreen> {
                 child: IntrinsicHeight(
                   child:   NavigationRail(
                     backgroundColor: Theme.of(context).primaryColor,
-                    indicatorColor: Colors.black,
+                    indicatorColor: Colors.white,
+                    selectedIconTheme:IconThemeData(
+                      color: Colors.white
+                    ) ,
                     destinations:
                     const [
                       NavigationRailDestination(icon: Icon(Icons.group),label: Text("Add Group")),
