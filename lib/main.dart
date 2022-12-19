@@ -1,5 +1,4 @@
-import 'package:e_shop/screens/company_settings_screen.dart';
-import 'package:e_shop/screens/login_register_screen.dart';
+import 'package:e_shop/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,6 +25,7 @@ class MyApp extends StatelessWidget {
           title: 'E-Shop',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
+          useMaterial3: true,
             primarySwatch: Colors.blue,
           ),
 home:  const Setting(),
@@ -35,39 +35,3 @@ home:  const Setting(),
   }
 }
 
-
-
-class Setting extends StatefulWidget {
-  const Setting({Key? key}) : super(key: key);
-
-  @override
-  State<Setting> createState() => _SettingState();
-}
-
-class _SettingState extends State<Setting> {
-  int _index=1;
-   List<Widget> screens =  [
-    const CompanySettingScreen(),
-     const LoginRegisterScreen(),
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("E-Shop"),
-      ),
-    body: screens[_index],
-    bottomNavigationBar:NavigationBar(
-      selectedIndex: _index,
-      onDestinationSelected: (index){
-        setState(() {
-          _index=index;
-        });
-      },
-      destinations: const [
-      NavigationDestination(icon: Icon(Icons.settings), label:"Company Settings" ),
-      NavigationDestination(icon: Icon(Icons.home), label:"Company Login/Register" ),
-    ],));
-    
-  }
-}

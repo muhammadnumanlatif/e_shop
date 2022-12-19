@@ -1,13 +1,13 @@
-import 'package:e_shop/screens/expense_type.dart';
-import 'package:e_shop/screens/group_permission_screen.dart';
-import 'package:e_shop/screens/group_to_user_screen.dart';
-import 'package:e_shop/screens/product_company_screen.dart';
-import 'package:e_shop/screens/product_group_screen.dart';
-import 'package:e_shop/screens/product_screen.dart';
-import 'package:e_shop/screens/product_unit_screen.dart';
-import 'package:e_shop/screens/sale_area_screen.dart';
-import 'package:e_shop/screens/save_group.dart';
-import 'package:e_shop/screens/user_permission.dart';
+import 'package:e_shop/screens/expense_type/expense_type.dart';
+import 'package:e_shop/screens/group_permission/group_permission_screen.dart';
+import 'package:e_shop/screens/user_to_group/user_to_group_screen.dart';
+import 'package:e_shop/screens/product_company/product_company_screen.dart';
+import 'package:e_shop/screens/product_group/product_group_screen.dart';
+import 'package:e_shop/screens/product/product_screen.dart';
+import 'package:e_shop/screens/product_unit/product_unit_screen.dart';
+import 'package:e_shop/screens/sale_area/sale_area_screen.dart';
+import 'package:e_shop/screens/group/group.dart';
+import 'package:e_shop/screens/user_permission/user_permission.dart';
 import 'package:flutter/material.dart';
 
 class PermissionDashboardScreen extends StatefulWidget {
@@ -47,7 +47,7 @@ class _PermissionDashboardScreenState extends State<PermissionDashboardScreen> {
                     backgroundColor: Theme.of(context).primaryColor,
                     indicatorColor: Colors.white,
                     selectedIconTheme:IconThemeData(
-                      color: Colors.white
+                      color: Theme.of(context).primaryColor
                     ) ,
                     destinations:
                     const [
