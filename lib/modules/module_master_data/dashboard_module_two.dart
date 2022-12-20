@@ -1,4 +1,3 @@
-import 'package:e_shop/module_master_data/sale_area/sale_area_screen.dart';
 import 'package:e_shop/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -7,15 +6,16 @@ import 'product/product_screen.dart';
 import 'product_company/product_company_screen.dart';
 import 'product_group/product_group_screen.dart';
 import 'product_unit/product_unit_screen.dart';
+import 'sale_area/sale_area_screen.dart';
 
-class DashboardModuleTwo extends StatefulWidget {
-  const DashboardModuleTwo({Key? key}) : super(key: key);
+class DashboardMasterData extends StatefulWidget {
+  const DashboardMasterData({Key? key}) : super(key: key);
 
   @override
-  State<DashboardModuleTwo> createState() => _DashboardModuleTwoState();
+  State<DashboardMasterData> createState() => _DashboardMasterDataState();
 }
 
-class _DashboardModuleTwoState extends State<DashboardModuleTwo> {
+class _DashboardMasterDataState extends State<DashboardMasterData> {
   int _index = 0;
   List<Widget> screens = [
     const SaleAreaScreen(),

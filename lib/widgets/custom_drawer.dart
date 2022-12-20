@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../module_master_data/dashboard_module_two.dart';
-import '../module_permission/dashboard_permission.dart';
+import '../modules/module_master_data/dashboard_module_two.dart';
+import '../modules/module_permission/dashboard_permission.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -22,8 +22,22 @@ class CustomDrawer extends StatelessWidget {
   }
   buildHeader(BuildContext context) {
     return Container(
+      width: double.infinity,
+      color: Theme.of(context).primaryColor,
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).padding.top,
+
+      ),
+      child: Column(
+        children: [
+          CircleAvatar(
+            child: Icon(Icons.person),
+          ),
+          SizedBox(height: 10.h,),
+         Text("Naveed",style: TextStyle(fontSize: 25.sp,color: Colors.white),),
+         Text("naveed@gmail.com",style: TextStyle(fontSize: 25.sp,color: Colors.white),),
+
+        ],
       ),
     );
   }
@@ -47,7 +61,7 @@ class CustomDrawer extends StatelessWidget {
             leading: Icon(Icons.perm_data_setting),
             title: Text("Master Data for Software Setting"),
             onTap: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>DashboardModuleTwo()));
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>DashboardMasterData()));
             },
           ),
 

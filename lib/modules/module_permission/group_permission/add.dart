@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../widgets/custom_button_widget.dart';
-import '../../widgets/custom_dropdown_widget.dart';
+import '../../../widgets/custom_button_widget.dart';
+import '../../../widgets/custom_dropdown_widget.dart';
+
 
 class AddGroupPermission extends StatefulWidget {
   const AddGroupPermission({Key? key}) : super(key: key);
@@ -17,6 +17,7 @@ class _AddGroupPermissionState extends State<AddGroupPermission> {
   String dropdownValue = 'One';
   String dropdownValue2 = 'One';
   List strings = ['One', 'Two', 'Free', 'Four'];
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -27,15 +28,16 @@ class _AddGroupPermissionState extends State<AddGroupPermission> {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.0.w),
-              child: const Text("User Name"),
+              child: const Text("Group Name"),
             ),
-            CustomDropdown(context: context, value: dropdownValue, string: strings),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.0),
-              child: Text("Permissions"),
+            CustomDropdown(context: context, value:dropdownValue, string: strings),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 25.0.w),
+              child: const Text("Permissions"),
             ),
             CustomDropdown(context: context, value: dropdownValue2, string: strings),
             CustomButton(function: () {  },),
+
           ],
         ),
       ),

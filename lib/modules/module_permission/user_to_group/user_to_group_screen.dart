@@ -1,8 +1,5 @@
-import 'package:e_shop/widgets/custom_dropdown_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../widgets/custom_button_widget.dart';
 import 'add.dart';
 import 'list.dart';
 

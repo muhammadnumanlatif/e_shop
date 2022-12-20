@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../widgets/custom_button_widget.dart';
-import '../../widgets/custom_text_field_widget.dart';
+import '../../../widgets/custom_button_widget.dart';
+import '../../../widgets/custom_text_field_widget.dart';
 
 class AddCompany extends StatefulWidget {
   const AddCompany({Key? key}) : super(key: key);

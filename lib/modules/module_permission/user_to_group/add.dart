@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../widgets/custom_button_widget.dart';
-import '../../widgets/custom_dropdown_widget.dart';
-
+import '../../../widgets/custom_button_widget.dart';
+import '../../../widgets/custom_dropdown_widget.dart';
 
 class AddGroupPermission extends StatefulWidget {
   const AddGroupPermission({Key? key}) : super(key: key);
@@ -27,13 +26,13 @@ class _AddGroupPermissionState extends State<AddGroupPermission> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.0.w),
-              child: const Text("Group Name"),
-            ),
-            CustomDropdown(context: context, value:dropdownValue, string: strings),
-            Padding(
               padding:  EdgeInsets.symmetric(horizontal: 25.0.w),
-              child: const Text("Permissions"),
+              child: const Text("Users Name"),
+            ),
+            CustomDropdown(context: context, value: dropdownValue, string: strings),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Text("Group Name"),
             ),
             CustomDropdown(context: context, value: dropdownValue2, string: strings),
             CustomButton(function: () {  },),

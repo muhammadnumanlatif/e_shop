@@ -2,7 +2,7 @@
 import 'package:e_shop/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
-import '../module_permission/login_register/login_register_screen.dart';
+import '../modules/module_permission/login_register/login_register_screen.dart';
 import 'company_settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {

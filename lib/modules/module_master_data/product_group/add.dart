@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/custom_button_widget.dart';
-import '../../widgets/custom_text_field_widget.dart';
+import '../../../widgets/custom_button_widget.dart';
+import '../../../widgets/custom_text_field_widget.dart';
 
 class AddProductGroup extends StatefulWidget {
   const AddProductGroup({Key? key}) : super(key: key);
