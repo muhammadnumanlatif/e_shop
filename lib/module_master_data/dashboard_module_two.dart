@@ -1,14 +1,12 @@
+import 'package:e_shop/module_master_data/sale_area/sale_area_screen.dart';
 import 'package:e_shop/screens/home_screen.dart';
-import 'package:e_shop/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
-
-import '../module_two/expense_type/expense_type.dart';
-import '../module_two/product/product_screen.dart';
-import '../module_two/product_company/product_company_screen.dart';
-import '../module_two/product_group/product_group_screen.dart';
-import '../module_two/product_unit/product_unit_screen.dart';
-import '../module_two/sale_area/sale_area_screen.dart';
+import 'expense_type/expense_type.dart';
+import 'product/product_screen.dart';
+import 'product_company/product_company_screen.dart';
+import 'product_group/product_group_screen.dart';
+import 'product_unit/product_unit_screen.dart';
 
 class DashboardModuleTwo extends StatefulWidget {
   const DashboardModuleTwo({Key? key}) : super(key: key);

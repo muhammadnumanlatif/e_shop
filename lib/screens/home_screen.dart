@@ -2,8 +2,8 @@
 import 'package:e_shop/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
+import '../module_permission/login_register/login_register_screen.dart';
 import 'company_settings_screen.dart';
-import '../module_one/login_register/login_register_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

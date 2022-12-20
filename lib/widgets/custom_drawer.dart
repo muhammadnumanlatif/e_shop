@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../module_one/dashboard_permission.dart';
-import '../module_two/dashboard_module_two.dart';
+import '../module_master_data/dashboard_module_two.dart';
+import '../module_permission/dashboard_permission.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
