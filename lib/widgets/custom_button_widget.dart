@@ -28,7 +28,7 @@ class CustomButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(50),
           color: Colors.grey[200],
-          boxShadow: const [
+          boxShadow:  [
             BoxShadow(
                 offset: Offset(0, 10),
                 blurRadius: 50,
@@ -36,8 +36,8 @@ class CustomButton extends StatelessWidget {
             ),
           ],
         ),
-        child: const Text(
-          "Save",
+        child:  Text(
+        text,
           style: TextStyle(
               color: Colors.white
           ),

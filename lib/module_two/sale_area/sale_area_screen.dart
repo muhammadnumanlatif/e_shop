@@ -28,7 +28,7 @@ class _SaleAreaScreenState extends State<SaleAreaScreen> {
             ],
           ),
         ),
-        body: const TabBarView(children: [
+        body:  TabBarView(children: [
           AddSaleArea(),
           ListofSaleArea(),
         ]),

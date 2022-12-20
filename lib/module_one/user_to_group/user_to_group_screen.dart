@@ -31,7 +31,7 @@ class _GroupToUserScreenState extends State<GroupToUserScreen> {
             ],
           ),
         ),
-        body: const TabBarView(children: [
+        body: TabBarView(children: [
           AddGroupPermission(),
           ListofGroup()
         ]),

@@ -4,7 +4,7 @@ import '../../widgets/custom_button_widget.dart';
 import '../../widgets/custom_text_field_widget.dart';
 
 class AddSaleArea extends StatefulWidget {
-  const AddSaleArea({Key? key}) : super(key: key);
+  AddSaleArea({Key? key}) : super(key: key);
 
   @override
   State<AddSaleArea> createState() => _AddSaleAreaState();

@@ -1,18 +1,18 @@
+
+import 'package:e_shop/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'company_settings_screen.dart';
-import 'login_register/login_register_screen.dart';
+import '../module_one/login_register/login_register_screen.dart';
 
-
-
-class Setting extends StatefulWidget {
-  const Setting({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<Setting> createState() => _SettingState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _SettingState extends State<Setting> {
+class _HomeScreenState extends State<HomeScreen> {
   int _index=1;
   List<Widget> screens =  [
     const CompanySettingScreen(),
@@ -21,9 +21,10 @@ class _SettingState extends State<Setting> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("E-Shop"),
-        ),
+      appBar: AppBar(
+        title: Text("E-Shop"),
+      ),
+      drawer: CustomDrawer(),
         body: screens[_index],
         bottomNavigationBar:NavigationBar(
           selectedIndex: _index,
@@ -38,4 +39,6 @@ class _SettingState extends State<Setting> {
           ],));
 
   }
+
+
 }

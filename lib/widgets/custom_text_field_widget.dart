@@ -3,8 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
-  CustomTextField({
-    Key? key, required this.hintText,
+  final IconData? icon;
+   CustomTextField({
+    Key? key, required this.hintText,  this.icon,
   }) : super(key: key);
 
   @override
@@ -28,6 +29,10 @@ class CustomTextField extends StatelessWidget {
       child: TextField(
         cursorColor: Theme.of(context).primaryColor,
         decoration: InputDecoration(
+          icon: Icon(
+            icon,
+            color: Theme.of(context).primaryColor,
+          ),
           focusColor: Theme.of(context).primaryColor,
           hintText: hintText,
           enabledBorder: InputBorder.none,
