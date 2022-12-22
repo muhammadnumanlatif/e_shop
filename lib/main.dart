@@ -1,4 +1,4 @@
-import 'package:e_shop/screens/home_screen.dart';
+import 'package:e_shop/screens/enter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
             primarySwatch: Colors.blue,
           ),
-home:  const HomeScreen(),
+home:  const EnterScreen(),
         );
       },
     );

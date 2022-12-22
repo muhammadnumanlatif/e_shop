@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../database_handler/dbHelper.dart';
+
 class ListofProduct extends StatefulWidget {
   const ListofProduct({Key? key}) : super(key: key);
 
@@ -8,10 +10,36 @@ class ListofProduct extends StatefulWidget {
 }
 
 class _ListofProductState extends State<ListofProduct> {
+
+  DbHelper? dbHelper;
+
+  @override
+  void initState() {
+    dbHelper=DbHelper();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("List of Company"),
-    );
+    return FutureBuilder(
+        future: dbHelper!.getProductGrouping(),
+        builder: (context,snapshot){
+          if(snapshot.hasData){
+            var data = snapshot.data!;
+            return ListView.builder(
+              itemCount: data.length,
+              itemBuilder: (context,index){
+                return ListTile(
+                  title: Text("${data[index]["sGroupName"]}"),
+                  subtitle: Text("${data[index]["sCode"]}"),
+                  leading: IconButton(onPressed: (){},icon: Icon(Icons.edit),),
+                  trailing: IconButton(onPressed: (){},icon: Icon(Icons.delete),),
+                );
+              },
+            );
+          }else {
+            return Center(child: CircularProgressIndicator(),);
+          }
+        });
   }
 }

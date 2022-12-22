@@ -1,3 +1,4 @@
+import 'package:e_shop/screens/enter_screen.dart';
 import 'package:e_shop/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 

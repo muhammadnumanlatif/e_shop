@@ -11,7 +11,7 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: function,
       child: Container(
         alignment: Alignment.center,
