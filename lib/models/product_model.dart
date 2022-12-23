@@ -14,8 +14,8 @@ class ProductModel {
   String? sProductLocation;
   String? sCode;
   String? sBarCode;
-  String? iBaseUnit;
-  String? iSecondaryUnit;
+  int? iBaseUnit;
+  int? iSecondaryUnit;
   String? sPeacePerSize;
   String? sTotalPeace;
   String? sTotalUnitSize;

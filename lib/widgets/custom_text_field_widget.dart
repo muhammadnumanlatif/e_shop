@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'dart:io';
 class CustomTextField extends StatelessWidget {
   final TextEditingController? textEditingController;
   final String hintText;
   final IconData? icon;
   final bool isObscureText;
   final TextInputType? inputType;
-   CustomTextField({
+
+  CustomTextField({
     Key? key,
      required this.hintText,
      this.icon,
      this.isObscureText=false,
      this.textEditingController,
      this.inputType=TextInputType.text,
+
   }) : super(key: key);
 
   @override
@@ -47,7 +49,7 @@ class CustomTextField extends StatelessWidget {
             color: Theme.of(context).primaryColor,
           ),
           focusColor: Theme.of(context).primaryColor,
-          hintText: hintText,
+          label: Text(hintText),
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
         ),

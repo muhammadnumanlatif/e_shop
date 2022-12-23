@@ -28,7 +28,7 @@ class _ProductScreenState extends State<ProductScreen> {
             ],
           ),
         ),
-        body: const TabBarView(children: [
+        body:  TabBarView(children: [
           AddProduct(),
           ListofProduct()
         ]),

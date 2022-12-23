@@ -160,7 +160,7 @@ class DbHelper {
        "dtCreatedDate	datetime DEFAULT NULL)"
    );
 
-   await db.execute(
+   batch.execute(
        "CREATE TABLE  $Table_Product("
    "iAutoID	INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL,"
        "iProductID	INTEGER NOT NULL,"
