@@ -10,6 +10,7 @@ import 'dart:io';
 
 import '../models/area_model.dart';
 import '../models/expense_type_model.dart';
+import '../models/product_model.dart';
 import '../models/user_model.dart';
 
 class DbHelper {
@@ -158,68 +159,74 @@ class DbHelper {
        "iAddedBy	INTEGER DEFAULT NULL,"
        "dtCreatedDate	datetime DEFAULT NULL)"
    );
-   //
-   // await db.execute(
-   //     "CREATE TABLE  $Table_Product("
-   // "iAutoID	INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL,"
-   //     "iProductID	INTEGER NOT NULL UNIQUE,"
-   //     "iSystemUserID	INTEGER DEFAULT NULL,"
-   //     "iFirmID	INTEGER DEFAULT NULL,"
-   //     "isProductCompanyID	INTEGER DEFAULT NULL,"
-   //     "isProductGroupID	INTEGER DEFAULT NULL,"
-   //     "isTaxcodeID	INTEGER DEFAULT NULL,"
-   //     "isExtraChargesID	INTEGER DEFAULT NULL,"
-   //     "sProductName	TEXT NOT NULL,"
-   //     "sProductLocation	TEXT DEFAULT NULL,"
-   //     "sCode	TEXT DEFAULT NULL,"
-   //     "sBarCode	TEXT DEFAULT NULL,"
-   //     "iBaseUnit	INTEGER DEFAULT NULL,"
-   //     "iSecondaryUnit	INTEGER DEFAULT NULL,"
-   //     "sPeacePerSize	TEXT DEFAULT NULL,"
-   //     "sTotalPeace	TEXT DEFAULT NULL,"
-   //     "sTotalUnitSize	TEXT DEFAULT NULL,"
-   //     "sWhatSecUnitIs TEXT DEFAULT NULL,"
-   //     "dcPurcasePerBaseUnitPrice	decimal(10, 2) DEFAULT NULL,"
-   //  "dcPurchasePerSecondaryUnitPrice	decimal(10, 2) DEFAULT NULL,"
-   //  "dcSalePerBaseUnitPrice	decimal(10, 2) DEFAULT NULL,"
-   //  "dSalePerSecondaryUnitPrice	TEXT DEFAULT NULL,"
-   //  "sProduct_image TEXT DEFAULT NULL,"
-   //  "sImage_Thumbnail	TEXT DEFAULT NULL,"
-   //  "sOpeningStockBaseUnit	TEXT DEFAULT NULL,"
-   //  "sOpeningStockSecondaryUnit	TEXT DEFAULT NULL,"
-   //  "sOpeningStockPurchase_At	TEXT DEFAULT NULL,"
-   //  "sTotalBaseUnitStockQty	TEXT DEFAULT NULL,"
-   //  "sTotalSecondaryUnitStockQty	TEXT DEFAULT NULL,"
-   //  "sTotalBaseUnitPurchaseValue	TEXT DEFAULT NULL,"
-   //  "sTotalSecondaryUnitPurchaseValue	TEXT DEFAULT NULL,"
-   //  "sProducttype	TEXT DEFAULT NULL,"
-   //  "sBaseUnitProfitRatio	TEXT DEFAULT NULL,"
-   //  "sSecoundaryUnitProfitRatio	TEXT DEFAULT NULL,"
-   //  "sTotalBaseUnitAvgPP	TEXT DEFAULT NULL,"
-   //  "sTotalSecUnitAvgPP	TEXT DEFAULT NULL,"
-   //  "sBonusRecivedStockInBaseUnit	TEXT DEFAULT NULL,"
-   //  "sBonusRecivedStockInSecondaryUnit	TEXT DEFAULT NULL,"
-   //  "sTotalBonusGivenStockOutInBaseUnit	TEXT DEFAULT NULL,"
-   //  "sTotalBonusGivenStockOutInSecUnit	TEXT DEFAULT NULL,"
-   //  "sTotalStockWithBonusInBaseUnitQty	TEXT DEFAULT NULL,"
-   //  "sTotalStockWithBonusInSecUnitQty	TEXT DEFAULT NULL,"
-   //  "bOnlineSale	TEXT NOT NULL,"
-   //  "sSyncStatus	TEXT DEFAULT NULL,"
-   //  "sEntrySource	TEXT DEFAULT NULL,"
-   //  "bStatus	TEXT DEFAULT NULL,"
-   //  "sAction	TEXT DEFAULT NULL,"
-   //  "iDeletedBy	INTEGER DEFAULT NULL,"
-   //  "dtDeletedDate	datetime DEFAULT NULL,"
-   //  "iUpdatedBy	INTEGER DEFAULT NULL,"
-   //  "dtUpdatedDate	datetime DEFAULT NULL,"
-   //  "iAddedBy	INTEGER DEFAULT NULL,"
-   //  "dtCreatedDate	datetime DEFAULT NULL,)"
-   // );
+
+   await db.execute(
+       "CREATE TABLE  $Table_Product("
+   "iAutoID	INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL,"
+       "iProductID	INTEGER NOT NULL,"
+       "iSystemUserID	INTEGER DEFAULT NULL,"
+       "iFirmID	INTEGER DEFAULT NULL,"
+       "isProductCompanyID	INTEGER DEFAULT NULL,"
+       "isProductGroupID	INTEGER DEFAULT NULL,"
+       "isTaxcodeID	INTEGER DEFAULT NULL,"
+       "isExtraChargesID	INTEGER DEFAULT NULL,"
+       "sProductName	TEXT NOT NULL,"
+       "sProductLocation	TEXT DEFAULT NULL,"
+       "sCode	TEXT DEFAULT NULL,"
+       "sBarCode	TEXT DEFAULT NULL,"
+       "iBaseUnit	INTEGER DEFAULT NULL,"
+       "iSecondaryUnit	INTEGER DEFAULT NULL,"
+       "sPeacePerSize	TEXT DEFAULT NULL,"
+       "sTotalPeace	TEXT DEFAULT NULL,"
+       "sTotalUnitSize	TEXT DEFAULT NULL,"
+       "sWhatSecUnitIs TEXT DEFAULT NULL,"
+       "dcPurcasePerBaseUnitPrice	decimal(10, 2) DEFAULT NULL,"
+    "dcPurchasePerSecondaryUnitPrice	decimal(10, 2) DEFAULT NULL,"
+    "dcSalePerBaseUnitPrice	decimal(10, 2) DEFAULT NULL,"
+    "dSalePerSecondaryUnitPrice	TEXT DEFAULT NULL,"
+    "sProduct_image TEXT DEFAULT NULL,"
+    "sImage_Thumbnail	TEXT DEFAULT NULL,"
+    "sOpeningStockBaseUnit	TEXT DEFAULT NULL,"
+    "sOpeningStockSecondaryUnit	TEXT DEFAULT NULL,"
+    "sOpeningStockPurchase_At	TEXT DEFAULT NULL,"
+    "sTotalBaseUnitStockQty	TEXT DEFAULT NULL,"
+    "sTotalSecondaryUnitStockQty	TEXT DEFAULT NULL,"
+    "sTotalBaseUnitPurchaseValue	TEXT DEFAULT NULL,"
+    "sTotalSecondaryUnitPurchaseValue	TEXT DEFAULT NULL,"
+    "sProducttype	TEXT DEFAULT NULL,"
+    "sBaseUnitProfitRatio	TEXT DEFAULT NULL,"
+    "sSecoundaryUnitProfitRatio	TEXT DEFAULT NULL,"
+    "sTotalBaseUnitAvgPP	TEXT DEFAULT NULL,"
+    "sTotalSecUnitAvgPP	TEXT DEFAULT NULL,"
+    "sBonusRecivedStockInBaseUnit	TEXT DEFAULT NULL,"
+    "sBonusRecivedStockInSecondaryUnit	TEXT DEFAULT NULL,"
+    "sTotalBonusGivenStockOutInBaseUnit	TEXT DEFAULT NULL,"
+    "sTotalBonusGivenStockOutInSecUnit	TEXT DEFAULT NULL,"
+    "sTotalStockWithBonusInBaseUnitQty	TEXT DEFAULT NULL,"
+    "sTotalStockWithBonusInSecUnitQty	TEXT DEFAULT NULL,"
+    "bOnlineSale	TEXT NOT NULL,"
+    "sSyncStatus	TEXT DEFAULT NULL,"
+    "sEntrySource	TEXT DEFAULT NULL,"
+    "bStatus	TEXT DEFAULT NULL,"
+    "sAction	TEXT DEFAULT NULL,"
+    "iDeletedBy	INTEGER DEFAULT NULL,"
+    "dtDeletedDate	datetime DEFAULT NULL,"
+    "iUpdatedBy	INTEGER DEFAULT NULL,"
+    "dtUpdatedDate	datetime DEFAULT NULL,"
+    "iAddedBy	INTEGER DEFAULT NULL,"
+    "dtCreatedDate	datetime DEFAULT NULL)"
+   );
     List<dynamic> res = await batch.commit();
   }
 
 
   //Save
+  Future<ProductModel> saveProductData(ProductModel product) async{
+    var dbClient = await db;
+    await dbClient.insert(Table_Product, product.toMap());
+    return product;
+  }
+
   Future<ExpenseTypeModel> saveExpenseTypeData(ExpenseTypeModel expenseType) async{
     var dbClient = await db;
     await dbClient.insert(Table_Expense_Type, expenseType.toMap());
@@ -254,6 +261,11 @@ class DbHelper {
   }
 
   //Get
+  Future<List<Map<String, Object?>>> getProduct() async{
+    var dbClient = await db;
+    List<Map<String, Object?>> res = await dbClient.query(Table_Product);
+    return res;
+  }
   Future<List<Map<String, Object?>>> getExpenseType() async{
     var dbClient = await db;
     List<Map<String, Object?>> res = await dbClient.query(Table_Product_Unit);

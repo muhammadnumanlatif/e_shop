@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomDropdown extends StatefulWidget {
  final BuildContext context;
- String value;
+ String? value;
      final List string;
 
    CustomDropdown({Key? key, required this.context, required this.value, required this.string}) : super(key: key);
@@ -32,7 +32,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
         ],
       ),
       child: DropdownButton<String>(
-        value:widget.value,
+        value:widget.value!.isNotEmpty ? widget.value : null,
         icon: const Icon(Icons.arrow_downward),
         iconSize: 24.sp,
         elevation: 16,
