@@ -517,7 +517,7 @@ class _AddProductState extends State<AddProduct> {
         sBarCode: _barCodeEditingController!.text,
         iBaseUnit: punits.indexOf(primary_unit_value),
         sPeacePerSize: _secondaryUnitSizeEditingController!.text,
-        sWhatSecUnitIs: "ltr",
+        sWhatSecUnitIs: _sWhatSecUnitIsEditingController!.text,
           sTotalUnitSize:_totalSizeEditingController!.text,
         dcPurchasePerSecondaryUnitPrice: double.parse(_ppSecondaryUnitEditingController!.text),
         dSalePerSecondaryUnitPrice: double.parse(_tpSecondaryUnitEditingController!.text),
